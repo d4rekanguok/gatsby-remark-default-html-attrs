@@ -16,7 +16,7 @@
   ],
   "author": "Derek Nguyen <derek@penandpillow.com>",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/d4rekanguok/gatsby-remark-default-html-attrs",
   "dependencies": {
     "unist-util-select": "^2.0.0"
   },

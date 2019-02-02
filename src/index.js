@@ -12,6 +12,7 @@ const headingsToQuery = () => {
 const elToQuery = {
   ...headingsToQuery(),
   'p': 'paragraph',
+  'img': 'image',
   'a': 'link',
   'em': 'emphasis',
   's': 'delete',
