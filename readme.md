@@ -40,9 +40,32 @@ module.exports = {
 
 ### `options`
 
-### key
+Accepts any valid `unist-util-select`'s `selectAll` query ([see list here](https://github.com/syntax-tree/unist-util-select#selectselectallselector-tree))
 
-Accepts any valid `unist-util-select`'s `selectAll` query ([see list here](https://github.com/syntax-tree/unist-util-select#selectselectallselector-tree)), but also accept a few shorthands:
+### markdown tokens
+
+Please note that the plugin matches against **markdown tokens** (`paragraph`, `list`, `code`) and *not* html tags (`p`, `ul`, `pre`).
+Here's a list of common markdown tokens & how it'll be translated to html tags:
+
+| Token | Equivalent HTML Tag |
+| --- | --- |
+| blockquote | blockquote
+| break | br |
+|	code | pre |
+| inlineCode | code |
+|	delete | s
+| emphasis | em |
+|	heading | h1...h6
+|	image | img |
+|	link | a |
+|	list | ul |
+| list[ordered] | ol |
+|	paragraph | p |
+|	strong | strong |
+|	table | table |
+|	thematic-break | hr |
+
+This plugin also provides a few shorthands:
 
 | Value | Equivalent |
 | --- | --- |
