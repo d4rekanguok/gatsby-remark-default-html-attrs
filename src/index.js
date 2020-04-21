@@ -29,15 +29,15 @@ module.exports = ({ markdownAST: mdast }, pluginOptions) => {
     targetNodes.forEach(node => {
       if (!node.data) node.data = {};
 
-      const props = propOfEl[el];
+      let props = propOfEl[el];
+
       if (typeof props === "string" || Array.isArray(props)) {
-        node.data.hProperties = {
+        props = {
           className: props,
         }
       }
-      else {
-        node.data.hProperties = props;
-      }
+      // if node.data.hProperties has already set, then assign it.
+      node.data.hProperties = Object.assign({}, node.data.hProperties, props)
     })
   })
 }
